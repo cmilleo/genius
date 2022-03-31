@@ -46,12 +46,15 @@ function initPage(){
     body.appendChild(backGround);
 }
 initPage();
-
+const namePlayer = document.getElementById('inputPlayer').value;
 const buttonPlay = document.getElementById('buttonPlay');
 buttonPlay.addEventListener('click', ()=>{
   const init = document.getElementById('init');
   init.href = 'style.css';
-  const namePlayer = document.getElementById('inputPlayer').value;
+  
   body.innerHTML = '';
-  initGame(namePlayer);
+  const script = document.createElement('script');
+  script.src = 'script.js';
+  body.appendChild(script);
+
 })

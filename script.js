@@ -1,44 +1,51 @@
+initGame(namePlayer);
+
 function initGame(namePlayer){
     const main = document.createElement('main');
     main.innerHTML = 
         `
             <div class="container">
-                <div class="bol"><button id="play">Play</button></div>
+                <div class="bol">
+                <button id="play">Play</button></div>
                 <div class="green"></div>
                 <div class="red"></div>
                 <div class="yellow"></div>
                 <div class="blue"></div>
             </div>
+            
         `
     main.id = 'mainGame';
     body.appendChild(main);
-    console.log(main)
     /* let player = new Player(namePlayer);
     let computer = new Computer();
     let game = new Game(player, computer);
     game.startGame(); */
 }
-
-
 const blue = document.querySelector('.blue');
 const container = document.querySelector('.container');
+//setInterval(()=>{container = document.querySelector('.container')}, 1000)
+//setInterval(()=>{blue = document.querySelector('.blue')}, 1000)
+
+
 function onOffClass(color){
-    color.classList.toggle('on');
-    audio(String(color.className))
-    console.log(color.className)
+    color.c
+    console.log(color)
+    blue.classList.toggle('on');
+    audio(String(blue))//color.className))
+    
 }
-function reciveNumberColor(number){
+/* function reciveNumberColor(number){
     switch(number){
         case 1:
-            return onOffClass('green');
+            return onOffClass(blue);
         case 2:
-            return 'green';
+            return onOffClass(blue);
         case 3:
-            return 'blue';
+            return onOffClass(blue);
         case 4:
             return onOffClass(blue);
     }
-}
+} */
 function audio(color) {
     let red = {color: "red" , audio: new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3")};
     let blue = {color: "blue on", audio: new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3")};
@@ -54,13 +61,13 @@ function audio(color) {
       yellow.audio.play();
     }
 }
+
 container.addEventListener('click', (event) => {
-    let color = event.target.className
-    console.log(color)
+    const color = event.target.className
     onOffClass(color);
-    setTimeout(onOffClass, 600);
+    setTimeout(()=> onOffClass(color), 600);
 });
-const turn = []
+/* const turn = []
 
 function generateRandom(){
     let num =  Math.floor(Math.random() * (4) + 1);
@@ -68,6 +75,6 @@ function generateRandom(){
 }
 
 const player = document.getElementById('play')
-player.addEventListener('click', generateRandom)
+player.addEventListener('click', generateRandom) */
 
 
