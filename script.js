@@ -1,3 +1,25 @@
+function initGame(namePlayer){
+    const main = document.createElement('main');
+    main.innerHTML = 
+        `
+            <div class="container">
+                <div class="bol"><button id="play">Play</button></div>
+                <div class="green"></div>
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="blue"></div>
+            </div>
+        `
+    main.id = 'mainGame';
+    body.appendChild(main);
+    console.log(main)
+    /* let player = new Player(namePlayer);
+    let computer = new Computer();
+    let game = new Game(player, computer);
+    game.startGame(); */
+}
+
+
 const blue = document.querySelector('.blue');
 const container = document.querySelector('.container');
 function onOffClass(color){

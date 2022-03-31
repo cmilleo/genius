@@ -24,7 +24,9 @@ function initPage(){
     const inputPlayer = document.createElement('input');
     inputPlayer.type = 'text';
     inputPlayer.placeholder = 'Digite seu nome';
+    inputPlayer.id = 'inputPlayer';
     const buttonPlay = document.createElement('button');
+    buttonPlay.id = 'buttonPlay';
     buttonPlay.innerText = 'Launch';
     
 
@@ -45,20 +47,11 @@ function initPage(){
 }
 initPage();
 
-
-
-function audio(color) {
-    let red = {color: "red" , audio: new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3")};
-    let blue = {color: "blue", audio: new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3")};
-    let yellow = {color: "yellow", audio: new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3")};
-    let green = {color: "green", audio: new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3")};
-    if(color === red.color) {
-      red.audio.play();
-    }else if(color === blue.color) {
-      blue.audio.play();
-    }else if(color === green.color) {
-      green.audio.play();
-    }else if(color === yellow.color) {
-      yellow.audio.play();
-    }
-  }
+const buttonPlay = document.getElementById('buttonPlay');
+buttonPlay.addEventListener('click', ()=>{
+  const init = document.getElementById('init');
+  init.href = 'style.css';
+  const namePlayer = document.getElementById('inputPlayer').value;
+  body.innerHTML = '';
+  initGame(namePlayer);
+})
