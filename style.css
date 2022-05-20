@@ -1,22 +1,70 @@
-*{
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body{
-    width: 100vw;
-    height: 100vh;
+    overflow: hidden;
     background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    color: #28a328;
 }
-main{
-    height: 100vh;
-    width: 950px;
-    background-color: gray;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.nave {
+    max-width: 1024px;
+    z-index: -1;
+    position: sticky;
+    margin-top: -560px;
+    margin-left: -160px;
 }
-.container{
+
+.green{
+    border: solid rgba(47, 233, 40, 0.7) 2px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100% 0 0 0;
+}
+
+.green.on{
+    background-color: rgb(47, 233, 40);
+    box-shadow: 0px 0px 32px 21px rgba(46, 233, 40, 0.479),inset 0px 0px 29px 3px rgba(2, 56, 11, 0.541);
+}
+
+.red{
+    border: solid rgba(255, 0, 0, 0.7) 2px;
+    width: 200px;
+    height: 200px;
+    border-radius: 0 100% 0 0;
+}
+
+.red.on{
+    background-color: rgb(250, 73, 73) ;
+    opacity: 1;
+    box-shadow: 0px 0px 32px 21px rgba(248, 47, 47, 0.644),inset 0px 0px 29px 3px rgba(56, 2, 2, 0.541);
+}
+
+.yellow{
+    border: solid rgba(218, 165, 32, 0.7) 2px;
+    width: 200px;
+    height: 200px;
+    border-radius: 0 0 100% 0;
+}
+
+.yellow.on{
+    background-color: rgb(220, 233, 40);
+    box-shadow: 0px 0px 32px 21px rgba(220, 233, 40, 0.692),inset 0px 0px 29px 3px rgba(56, 55, 2, 0.541);
+}
+
+.blue{
+    border: solid rgba(137, 43, 226, 0.7) 2px;
+    width: 200px;
+    height: 200px;
+    border-radius: 0 0 0 100%;
+}
+
+.blue.on{
+    background-color: rgb(40, 130, 233);
+    box-shadow: 0px 0px 32px 21px rgb(40, 130, 233),inset 0px 0px 29px 3px rgba(2, 10, 56, 0.699);
+}
+
+#colors{
     box-sizing: content-box;
     display: flex;
     justify-content: center;
@@ -24,54 +72,54 @@ main{
     margin: 0 auto;
     flex-wrap: wrap;
     width: 500px;
+    margin-top: 130px;
 }
-.blue.on{
-    
-    background-color: #00ffff;
-    margin-top: -20px;
-    margin-left: -15px;
-    width: 220px;
-    height: 220px;
-    box-shadow: 0px 0px 32px 21px rgba(37, 179, 245, 0.773),inset 0px 0px 29px 3px rgba(3, 0, 163, 0.541);
-}
-.bol{
+
+.console{
+    width: 225px;
+    height: 225px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 100%;
+    top: 220px;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
     justify-content: center;
-    
-    margin: auto;
-    width: 200px;
-    height: 200px;
-    background-color: #6b4c4c;
-    position: absolute;
-    top: auto;
-	border-radius: 100%;
 }
 
-.green{
-    background-color: green;
-    width: 200px;
-    height: 200px;
-    border-radius: 100% 0 0 0;
+.console h1{
+    font-size: 0.8rem;
+    margin-top: 25px;
 }
 
-.red{
-    background-color: red;
-    width: 200px;
-    height: 200px;
-    border-radius: 0 100% 0 0;
-}
-.blue{
-    background-color: blue;
-    width: 200px;
-    height: 200px;
-    border-radius: 0 0 100% 0;
-}
-.yellow{
-    background-color: yellow;
-    width: 200px;
-    height: 200px;
-    border-radius: 0 0 0 100%;
+.console button{
+    border: none;
+    background-color: #28a328;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
 }
 
+.console button:hover{
+    background-color: #2ecc40;
+}
 
+.console h3{
+    text-align: center;
+}
+
+#levelH3 {
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+#pcMessages{
+    padding: 5px;
+    width: 170px;
+    text-align: center;
+    height: 30px;
+}
