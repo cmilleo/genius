@@ -1,7 +1,7 @@
-const red = { color: "red", audio: new Audio("./audio/audio-1.mp3") },
-  blue = { color: "blue", audio: new Audio("./audio/audio-2.mp3") },
-  yellow = { color: "yellow", audio: new Audio("./audio/audio-3.mp3") },
-  green = { color: "green", audio: new Audio("./audio/audio-4.mp3") };
+const red = { color: "red", audio: new Audio("./src/audio/audio-1.mp3") },
+  blue = { color: "blue", audio: new Audio("./src/audio/audio-2.mp3") },
+  yellow = { color: "yellow", audio: new Audio("./src/audio/audio-3.mp3") },
+  green = { color: "green", audio: new Audio("./src/audio/audio-4.mp3") };
 
 function initGame(namePlayer) {
   const body = document.body;
@@ -39,7 +39,7 @@ function initGame(namePlayer) {
   buttonReset.innerText = "Iniciar";
   const imagem = document.createElement("img");
   imagem.className = "nave";
-  imagem.src = "./img/bg-2.png";
+  imagem.src = "./src/img/bg-2.png";
   console.append(nameGame, namePlayerText, level, pcMessages, buttonReset);
   colors.append(console, divGreen, divRed, divBlue, divYellow, imagem);
   section.appendChild(colors);

@@ -4,7 +4,7 @@ function initPage() {
   const main = document.createElement("main");
   main.id = "mainInit";
   const backGround = document.createElement("img");
-  backGround.src = "./img/bg-1.png";
+  backGround.src = "./src/img/bg-1.png";
   const container = document.createElement("div");
   container.classList.add("containerInit");
   const cardTop = document.createElement("div");
@@ -46,7 +46,7 @@ const inputPlayer = document.getElementById("inputPlayer");
 const buttonPlay = document.getElementById("buttonPlay");
 buttonPlay.addEventListener("click", () => {
   const init = document.getElementById("init");
-  init.href = "style.css";
+  init.href = "./src/style/style.css";
   const main = document.getElementById("mainInit");
   const img = document.getElementsByTagName("img")[0];
   main.remove();
